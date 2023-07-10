@@ -30,17 +30,19 @@ To train the facial emotion recognition models, use the train.py script. It supp
 python train.py --model_name CNNModel --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
 </pre>
 
-- model_name: Name of the model (default: CNNModel)
-- data_dir: Path to the data directory (required)
-- batch_size: Batch size for training (default: 32)
-- num_epochs: Number of training epochs (default: 10)
-- lr_rate: Learning rate (default: 0.001)
-- optimizer: Optimizer for training (default: adam)
-- device: Device for training (default: cuda)
-- criterion: Loss function of the model (required)
-- pretrained: Indicate if the training is done on a pretrained model
-- timm_model: Indicate using a model from the timm library
-- train_last_layer: If specified, only the last layer of the pretrained model is trained
+- `model_name`: Name of the model (default: CNNModel)
+- `data_dir`: Path to the data directory (required)
+- `batch_size`: Batch size for training (default: 32)
+- `num_epochs`: Number of training epochs (default: 10)
+- `lr_rate`: Learning rate (default: 0.001)
+- `optimizer`: Optimizer for training (default: adam)
+- `device`: Device for training (default: cuda)
+- `criterion`: Loss function of the model (required)
+- `pretrained`: Indicate if the training is done on a pretrained model
+- `timm_model`: Indicate using a model from the timm library
+- `train_last_layer`: If specified, only the last layer of the pretrained model is trained
+
+
 
 ### Evaluation
 To evaluate the trained models on the test data, use the `eval.py` script. Specify the following command-line arguments:
@@ -56,7 +58,10 @@ Run the following command to evaluate the models:
 python eval.py -t --model_name CNNModel --data_dir ./data --checkpoint_path <path_to_checkpoint>
 </pre>
 
-
 ## Models
-This project supports both manually implemented models and models from the timm library. You can specify the model architecture by choosing the appropriate model_name argument during training and evaluation.
 
+This project supports both manually implemented models and models from the `timm` library. You can specify the model architecture by choosing the appropriate `model_name` argument during training and evaluation. 
+
+Transfer learning is also supported, allowing you to leverage pre-trained models and their learned features. By setting the `pretrained` flag, you can use a pre-trained model for training, fine-tuning, or transfer learning on your facial emotion recognition task. Additionally, if you want to train only the last layer of a pre-trained model, you can use the `train_last_layer` flag.
+
+With this flexibility, you can easily experiment with different architectures, including custom models and pre-trained models, to achieve optimal performance in facial emotion recognition tasks.
