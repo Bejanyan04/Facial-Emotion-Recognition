@@ -30,19 +30,19 @@ To train the facial emotion recognition models, use the train.py script. It supp
 python train.py --model_name CNNModel --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
 </pre>
 
--model_name: Name of the model (default: CNNModel)
--data_dir: Path to the data directory (required)
--batch_size: Batch size for training (default: 32)
--num_epochs: Number of training epochs (default: 10)
--lr_rate: Learning rate (default: 0.001)
--optimizer: Optimizer for training (default: adam)
--device: Device for training (default: cuda)
--criterion: Loss function of the model (required)
--pretrained: Indicate if the training is done on a pretrained model
--timm_model: Indicate using a model from the timm library
--train_last_layer: If specified, only the last layer of the pretrained model is trained
+- model_name: Name of the model (default: CNNModel)
+- data_dir: Path to the data directory (required)
+- batch_size: Batch size for training (default: 32)
+- num_epochs: Number of training epochs (default: 10)
+- lr_rate: Learning rate (default: 0.001)
+- optimizer: Optimizer for training (default: adam)
+- device: Device for training (default: cuda)
+- criterion: Loss function of the model (required)
+- pretrained: Indicate if the training is done on a pretrained model
+- timm_model: Indicate using a model from the timm library
+- train_last_layer: If specified, only the last layer of the pretrained model is trained
 
-###Evaluation
+### Evaluation
 To evaluate the trained models on the test data, use the `eval.py` script. Specify the following command-line arguments:
 
 - `-t` or `--timm_model`: Define if the model is a timm model or a manual model (optional, use `-t` flag to indicate timm model).
