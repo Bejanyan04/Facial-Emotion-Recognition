@@ -14,7 +14,7 @@ This project is a facial emotion recognition system using machine learning. It i
 Facial emotion recognition is a task in computer vision that involves detecting and classifying emotions based on facial expressions. This project aims to provide a flexible and customizable solution for training facial emotion recognition models using a variety of architectures.
 
 ## Installation
-Clone the repository:
+Clone the repository
 ## Dataset
 
 To use this project, you will need to download the `icml_face_data.csv` file from the official Kaggle website:
