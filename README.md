@@ -2,6 +2,7 @@
 This project is a facial emotion recognition system using machine learning. It includes code for preprocessing the data, training the models, and evaluating their accuracy on test data.
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Dataset](#dataset)
 - [Usage](#usage)
   - [Preprocessing](#preprocessing)
   - [Training](#training)
@@ -14,9 +15,18 @@ Facial emotion recognition is a task in computer vision that involves detecting 
 
 ## Installation
 Clone the repository:
+## Dataset
+
+To use this project, you will need to download the `icml_face_data.csv` file from the official Kaggle website:
+
+- [Download `icml_face_data.csv`](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
+
+After downloading the file, place it in the `data` folder of this repository. The `data` folder should be created at the root directory of the repository if it does not already exist.
+
 
 ## Usage
 ### Preprocessing
+
 Before training the models, you need to preprocess the data and convert the pixel values from a CSV file into images. Run the preprocess.py script without any arguments to perform this step.
 <pre>
 python preprocess.py
