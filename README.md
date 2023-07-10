@@ -8,15 +8,15 @@ This project is a facial emotion recognition system using machine learning. It i
   - [Evaluation](#evaluation)
 - [Models](#models)
 
-##Introduction
+## Introduction
 
 Facial emotion recognition is a task in computer vision that involves detecting and classifying emotions based on facial expressions. This project aims to provide a flexible and customizable solution for training facial emotion recognition models using a variety of architectures.
 
 ##Installation
 Clone the repository:
 
-##Usage
-###Preprocessing
+## Usage
+### Preprocessing
 Before training the models, you need to preprocess the data and convert the pixel values from a CSV file into images. Run the preprocess.py script without any arguments to perform this step.
 <pre>
 ```shell
@@ -28,7 +28,7 @@ This script will split the data into train, test, and validation sets and create
 ###Training
 To train the facial emotion recognition models, use the train.py script. It supports both manually implemented models and models from the timm library. Specify the required command-line arguments to customize the training process.
 <pre>
-```shell
+```
 python train.py --model_name CNNModel --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
 ```
 </pre>
@@ -58,6 +58,7 @@ Run the following command to evaluate the models:
 ```shell
 python eval.py -t --model_name CNNModel --data_dir ./data --checkpoint_path <path_to_checkpoint>
 
-##Models
+
+## Models
 This project supports both manually implemented models and models from the timm library. You can specify the model architecture by choosing the appropriate model_name argument during training and evaluation.
 
