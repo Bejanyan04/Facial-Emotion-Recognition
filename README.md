@@ -19,18 +19,15 @@ Clone the repository:
 ### Preprocessing
 Before training the models, you need to preprocess the data and convert the pixel values from a CSV file into images. Run the preprocess.py script without any arguments to perform this step.
 <pre>
-```shell
 python preprocess.py
-```
 </pre>
 This script will split the data into train, test, and validation sets and create images corresponding to the pixel information in the CSV file.
 
-###Training
+### Training
 To train the facial emotion recognition models, use the train.py script. It supports both manually implemented models and models from the timm library. Specify the required command-line arguments to customize the training process.
 <pre>
-```
+
 python train.py --model_name CNNModel --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
-```
 </pre>
 
 -model_name: Name of the model (default: CNNModel)
@@ -55,8 +52,9 @@ To evaluate the trained models on the test data, use the `eval.py` script. Speci
 
 Run the following command to evaluate the models:
 
-```shell
+<pre>
 python eval.py -t --model_name CNNModel --data_dir ./data --checkpoint_path <path_to_checkpoint>
+</pre>
 
 
 ## Models
