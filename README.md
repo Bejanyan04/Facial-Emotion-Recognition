@@ -37,7 +37,7 @@ This script will split the data into train, test, and validation sets and create
 To train the facial emotion recognition models, use the train.py script. It supports both manually implemented models and models from the timm library. Specify the required command-line arguments to customize the training process.
 <pre>
 
-python train.py --model_name CNNModel --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
+python train.py --model_name 'vgg19' --data_dir ./data --batch_size 32 --num_epochs 10 --lr_rate 0.001 --optimizer adam --device cuda --criterion &lt;loss_function&gt; --pretrained --timm_model --train_last_layer
 </pre>
 
 - `model_name`: Name of the model (default: CNNModel)
